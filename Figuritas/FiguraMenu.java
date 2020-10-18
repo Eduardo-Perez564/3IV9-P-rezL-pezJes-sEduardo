@@ -11,7 +11,7 @@ class FiguraMenu{
         Scanner entrada = new Scanner(System.in);
 
         int opcion;
-        int altura, base;
+        double altura, base, radio, apotema;
         double area, perimetro, l1, l2;
 
 
@@ -19,7 +19,7 @@ class FiguraMenu{
         System.out.println("Elija una de las siguientes opciones: ");
         System.out.println("1. Calcular area y perimetro de un cuadrado.");
         System.out.println("2. Calcular area y perimetro de un triangulo.");
-        System.out.println("3. Calcular area y perimetro de un circulo.");
+        System.out.println("3. Calcular area y circunferencia de un circulo.");
         System.out.println("4. Calcular area y perimetro de un rectangulo.");
         System.out.println("5. Calcular area y perimetro de un rombo.");
         System.out.println("6. Calcular area y perimetro de un hexagono.");
@@ -33,7 +33,7 @@ class FiguraMenu{
                 System.out.println("Recuerda que solo aceptamos valores Reales Positivos");
                 do{
                 System.out.println("Ingresa el valor de un lado");
-                base = entrada.nextInt();
+                base = entrada.nextDouble();
                 }while (base <=0);
                 area = base*base;
                 perimetro = base*4;
@@ -43,23 +43,47 @@ class FiguraMenu{
                 System.out.println("Recuerda que solo aceptamos valores Reales Positivos");
                 do{
                     System.out.println("Ingresa el valor de la base");
-                    base = entrada.nextInt();
+                    base = entrada.nextDouble();
                 } while(base<=0);
                 do{
                     System.out.println("Ingresa el valor del primer lado");
-                    l1 = entrada.nextInt();
+                    l1 = entrada.nextDouble();
                 } while(l1<=0);
                 do{
                     System.out.println("Ingresa el valor del segundo lado");
-                    l2 = entrada.nextInt();
+                    l2 = entrada.nextDouble();
                 } while(l2<=0);
                 do{
                     System.out.println("Ingresa el valor de la altura");
-                    altura = entrada.nextInt();
+                    altura = entrada.nextDouble();
                 } while(altura<=0);
                     area = (base*altura)/2;
                     perimetro = (base+l1+l2);
                 System.out.println("El area de tu cuadrado es "+area+" y el perimetro "+perimetro+".");
+                break;
+            case 3: 
+                System.out.println("Recuerda que solo aceptamos valores Reales Positivos");
+                do{
+                    System.out.println("Ingresa el valor del radio");
+                    radio = entrada.nextDouble();
+                }while (radio<=0);
+                area = (radio*radio)*3.1416;
+                perimetro = (radio*2)*3.1416;
+                System.out.println("El area de tu circulo es: "+area+" y la circunferecia: "+perimetro+"");
+                break;
+            case 4:
+                System.out.println("Recuerda que solo aceptamos valores Reales Positivos");
+                do{
+                    System.out.println("Ingresa el valor de la altura");
+                    altura= entrada.nextDouble();
+                }while (altura<=0);
+                do{
+                    System.out.println("Ingresa el valor de la base");
+                    base = entrada.nextDouble();
+                }while (base<=0);
+                area = base*altura;
+                perimetro = (base*2)+(altura*2);
+                System.out.println("El area de tu rectangulo es "+area+" y el perimetro es "+perimetro+" ");
                 break;
             default:
                 System.out.println( "Lo sentimos, no existe esa opcion. :D");

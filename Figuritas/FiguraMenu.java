@@ -130,6 +130,9 @@ class FiguraMenu{
                     area = (perimetro*apotema)/2;
                     System.out.println("El area de tu hexagono es "+area+" y el perimetro es "+perimetro+"");
                 break;
+                case 7:
+                    System.out.println("Vuelva pronto. :)");
+                break;
                 default:
                     System.out.println( "Lo sentimos, no existe esa opcion. :D");
                 break;

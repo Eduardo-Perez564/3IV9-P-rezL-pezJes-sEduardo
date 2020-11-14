@@ -31,10 +31,8 @@ public class arreglosMatriz{
         for(int i = 0; i<matriz.length; i++){
             //columnas
             for(int j = 0; j<matriz.length; j++){
-                //vamos a llenar nuestra matriz
                 System.out.println("Ingresa el valor de la fila: "
                 + i + " y la columna : "+ j + " ");
-                //tenemos que entregar la posicion
                 matriz[i][j]=entrada.nextInt();
             }
         }
@@ -48,7 +46,6 @@ public class arreglosMatriz{
             System.out.println(String.format("\nSumar de las filas: %f, Promedio de la fila: %f", sumarFilas, sumarFilas/matriz.length ));
         }
 
-        //1+1 = 11    1+1 = 2
 
         
     }

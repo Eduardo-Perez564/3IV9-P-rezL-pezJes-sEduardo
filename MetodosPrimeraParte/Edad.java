@@ -1,8 +1,7 @@
 import java.util.Scanner;
-import java.util.Date;
 
 
-public class Ejercicios{
+public class Edad{
 
     Scanner entrada = new Scanner(System.in);
 
@@ -27,8 +26,10 @@ public class Ejercicios{
                 case 'a':
                     System.out.println("Holi UwU");
                     
-                    Ejercicios obj = new Ejercicios();
+                    Edad obj = new Edad();
                     obj.perdir_datos();
+                    Edad obj1 = new Edad();
+                    obj1.calcular_edad();
 
                 break;
                 case 'B':
@@ -56,25 +57,25 @@ public class Ejercicios{
         
         Scanner entrada = new Scanner(System.in);
         
-        Date Fecha = new Date();
+        int mes, anio;
 
-        String name;
-        int dia, mes, anio;
-
-        System.out.println(Fecha);
-        System.out.println("Ingresa tu nombre");
-        name = entrada.nextLine();
-
-        System.out.println("Ingresa tu fecha de nacimiento con el siguiente formato: dd/mm/aaaa");
-        System.out.println("Algo así: 06/05/2004");
-        System.out.println("Primero el día");
-        dia = entrada.nextInt();
-        System.out.println("Ahora el mes");
+        System.out.println("En que mes naciste (introducelo como numero, por favor)?");
         mes = entrada.nextInt();
-        System.out.println("Y por ultimo el año");
+        System.out.println("En que anio naciste (introducelo como numero, por favor)?");
         anio = entrada.nextInt();
 
     }
 
+    public void calcular_edad(int mes, int anio){
+
+        int mm, aa;
+
+        mm = 12-mes;
+
+        aa = 2020-anio;
+
+        System.out.println("Tu edad es de"+aa+"anios y "+mm+"meses");
+
+    }
     
 }

@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.util.Date;
+
 
 public class Ejercicios{
 
@@ -54,9 +56,12 @@ public class Ejercicios{
         
         Scanner entrada = new Scanner(System.in);
         
+        Date Fecha = new Date();
+
         String name;
         int dia, mes, anio;
 
+        System.out.println(Fecha);
         System.out.println("Ingresa tu nombre");
         name = entrada.nextLine();
 

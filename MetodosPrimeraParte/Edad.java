@@ -7,18 +7,18 @@ public class Edad{
         Scanner entrada = new Scanner(System.in);
 
         int mes, anio;
-        int edada, edadm;
+        int aa, mm;
 
-        System.out.println("En que mes naciste (introducelo como numero, por favor)?");
+        System.out.println("En que mes naciste?(introducelo como numero, por favor)");
         mes = entrada.nextInt();
-        System.out.println("En que anio naciste (introducelo como numero, por favor)?");
+        System.out.println("En que anio naciste? (introducelo como numero, por favor)");
         anio = entrada.nextInt();
 
-        edada = calcular_edada(anio);
+        aa = calcular_edada(anio);
 
-        edadm = calcular_edada(mes);
+        mm = calcular_edada(mes);
 
-        System.out.println("Tu edad es de"+edada+"anios y "+edadm+"meses");
+        System.out.println("Tu edad es de" +aa+ "anios y "+mm+"meses");
 
     }
 

@@ -4,10 +4,12 @@ public class Menu{
 
     public static void main(String[] args){
         
-        do{
+        do{ 
 
             Scanner entrada = new Scanner(System.in);
-            
+        
+            char exit, opc;
+
             System.out.println("Bienvenido UWU");
             System.out.println("Que programa deseas ejecutar?");
             System.out.println("A. Calcular la Edad ");
@@ -23,7 +25,7 @@ public class Menu{
                     System.out.println("Holi UwU");
                     
                     Edad obj = new Edad();
-                    obj.pedir_datos();
+                    obj.perdir_datos();
 
                 break;
                 case 'B':
@@ -41,9 +43,9 @@ public class Menu{
             }
             
             System.out.println("Si deseas repetir el programa, oprime r");
-            re = entrada.next().charAt(0);
+            exit = entrada.next().charAt(0);
 
-        }while(re == 'r' || re == 'R');
+        }while ( exit == 'r');
         
         
     }

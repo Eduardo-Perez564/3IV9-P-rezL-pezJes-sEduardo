@@ -7,75 +7,43 @@ public class Edad{
 
     char opc, re;
 
-    public void menu(){
-
+    public class Edad1{
+        public void perdir_datos(){
         
-        do{
-
-            System.out.println("Bienvenido UWU");
-            System.out.println("Que programa deseas ejecutar?");
-            System.out.println("A. Calcular la Edad ");
-            System.out.println("B. Areas y perimetros");
-            System.out.println("C. Costo de Llamadas telefonicas");
-
-            opc = entrada.next().charAt(0);
-
-            switch (opc) {
-
-                case 'A':
-                case 'a':
-                    System.out.println("Holi UwU");
-                    
-                    Edad obj = new Edad();
-                    obj.perdir_datos();
-                    Edad obj1 = new Edad();
-                    obj1.calcular_edad();
-
-                break;
-                case 'B':
-                case 'b':
-                    System.out.println("Holi UwU");
-                break;
-                case 'C':
-                case 'c':
-                    System.out.println("Holi UwU");
-                break;
-                default:
-                    System.out.println("OnO Esa opción no existe");
-                break;
-    
-            }
+            Scanner entrada = new Scanner(System.in);
             
-            System.out.println("Si deseas repetir el programa, oprime r");
-            re = entrada.next().charAt(0);
-
-        }while(re == 'r' || re == 'R');
-        
+            int mes, anio;
+            int edada, edadm;
+    
+            System.out.println("En que mes naciste (introducelo como numero, por favor)?");
+            mes = entrada.nextInt();
+            System.out.println("En que anio naciste (introducelo como numero, por favor)?");
+            anio = entrada.nextInt();
+    
+            edada = calcular_edada(anio);
+    
+            edadm = calcular_edada(mes);
+    
+            System.out.println("Tu edad es de"+edada+"anios y "+edadm+"meses");
+    
+        }
+    
+        public int calcular_edada(int anio){
+    
+            int aa;
+            aa = 2020-anio;
+    
+            return aa;
+        }
+        public int calcular_edadm(int mes){
+    
+            int mm;
+            mm = 12-mes;
+            
+            return mm;
+        }
     }
 
-    public void perdir_datos(){
-        
-        Scanner entrada = new Scanner(System.in);
-        
-        int mes, anio;
-
-        System.out.println("En que mes naciste (introducelo como numero, por favor)?");
-        mes = entrada.nextInt();
-        System.out.println("En que anio naciste (introducelo como numero, por favor)?");
-        anio = entrada.nextInt();
-
-    }
-
-    public void calcular_edad(int mes, int anio){
-
-        int mm, aa;
-
-        mm = 12-mes;
-
-        aa = 2020-anio;
-
-        System.out.println("Tu edad es de"+aa+"anios y "+mm+"meses");
-
-    }
+    
     
 }

@@ -1,4 +1,4 @@
-import javax.swing.JOptionPane;
+import java.util.Scanner;
 
 public class Menu{
 
@@ -6,6 +6,8 @@ public class Menu{
         
         do{
 
+            Scanner entrada = new Scanner(System.in);
+            
             System.out.println("Bienvenido UWU");
             System.out.println("Que programa deseas ejecutar?");
             System.out.println("A. Calcular la Edad ");
@@ -43,8 +45,6 @@ public class Menu{
 
         }while(re == 'r' || re == 'R');
         
-        Edad obj = new Edad();
-        obj.menu();
         
     }
 

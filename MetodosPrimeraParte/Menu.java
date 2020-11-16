@@ -4,11 +4,11 @@ public class Menu{
 
     public static void main(String[] args){
         
-        do{ 
+        Scanner entrada = new Scanner(System.in);
 
-            Scanner entrada = new Scanner(System.in);
-        
-            char exit, opc;
+        char exit, opc;
+
+        do{ 
 
             System.out.println("Bienvenido UWU");
             System.out.println("Que programa deseas ejecutar?");
@@ -45,7 +45,7 @@ public class Menu{
             System.out.println("Si deseas repetir el programa, oprime r");
             exit = entrada.next().charAt(0);
 
-        }while ( exit == 'r');
+        }while(exit == 'r' || exit == 'R');
         
         
     }

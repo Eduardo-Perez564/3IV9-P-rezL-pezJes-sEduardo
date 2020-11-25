@@ -31,6 +31,10 @@ public class Menu{
                 case 'B':
                 case 'b':
                     System.out.println("Holi UwU");
+
+                    AyP obj1 = new AyP();
+                    obj1.menu();
+
                 break;
                 case 'C':
                 case 'c':

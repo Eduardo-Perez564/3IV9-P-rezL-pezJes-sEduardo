@@ -4,12 +4,12 @@ public class Llamada{
 
     Scanner entrada = new Scanner(System.in);
 
-    int numero_celular;
+    String numero_celular;
     int opc;
     int credito = 80;
     char repetir;
     
-    public void menu(){
+    public void menullama(){
 
         System.out.println("Bienvenido, como eres un nuevo usuario te regalamos $80 de credito");
         
@@ -31,21 +31,24 @@ public class Llamada{
                 obj.llamalocal();
 
                 break;
-            
             case 2:
 
                 System.out.println("Cada llamada internacional tiene un precio de $0.6");
                 obj.llamainter();
 
                 break;
-
             case 3:
 
                 System.out.println("Cada llamada a un numero celular tiene un precio de $0.2");
                 obj.llamacelular();
 
                 break;
-        
+            case 4:
+
+                System.out.println("Con esto puedes consultar tu credito");
+                obj.consultar();
+
+                break;
             default:
 
                 System.out.println("Lo sentimos, no existe esa opcion. unu");
@@ -57,11 +60,11 @@ public class Llamada{
     public void llamalocal(){
 
         System.out.println("Ingresa el numero al que desees llamar");
-        numero_celular = entrada.nextInt();
+        numero_celular = System.console().readLine();
 
         do{
             credito -= 0.5;
-            System.out.println("Listo");
+            System.out.println("Listo, ahora tu saldo es de $"+credito);
             System.out.println("Si deseas realizar otra llamada, presiona R");
             repetir = entrada.next().charAt(0);
 
@@ -71,11 +74,11 @@ public class Llamada{
     public void llamainter(){
 
         System.out.println("Ingresa el numero al que desees llamar");
-        numero_celular = entrada.nextInt();
+        numero_celular = System.console().readLine();
 
         do{
             credito -= 0.6;
-            System.out.println("Listo");
+            System.out.println("Listo, ahora tu credito es de $"+credito);
             System.out.println("Si deseas realizar otra llamada, presiona R");
             repetir = entrada.next().charAt(0);
 
@@ -85,15 +88,20 @@ public class Llamada{
     public void llamacelular(){
 
         System.out.println("Ingresa el numero al que desees llamar");
-        numero_celular = entrada.nextInt();
+        numero_celular = System.console().readLine();
 
         do{
             credito -= 0.2;
-            System.out.println("Listo");
+            System.out.println("Listo, ahora tu credito es de $"+credito);
             System.out.println("Si deseas realizar otra llamada, presiona R");
             repetir = entrada.next().charAt(0);
 
         }while(repetir == 'r' || repetir == 'R');
+    }
+
+    public void consultar(){
+
+        System.out.println("Tu credito es de $"+credito);
     }
 
 }

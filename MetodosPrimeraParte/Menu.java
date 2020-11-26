@@ -22,15 +22,15 @@ public class Menu{
 
                 case 'A':
                 case 'a':
-                    System.out.println("Holi UwU");
+                    System.out.println("Holi uwu");
                     
                     Edad obj = new Edad();
-                    obj.perdir_datos();
+                    obj.llamarEdad();
 
                 break;
                 case 'B':
                 case 'b':
-                    System.out.println("Holi UwU");
+                    System.out.println("Holi uwu");
 
                     AyP obj1 = new AyP();
                     obj1.menu();
@@ -38,7 +38,11 @@ public class Menu{
                 break;
                 case 'C':
                 case 'c':
-                    System.out.println("Holi UwU");
+                    System.out.println("Holi uwu");
+
+                    Llamada obj2 = new Llamada();
+                    obj2.menullama();
+
                 break;
                 default:
                     System.out.println("OnO Esa opción no existe");

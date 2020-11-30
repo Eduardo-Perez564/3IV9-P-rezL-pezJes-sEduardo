@@ -42,25 +42,10 @@ public class Programas{
 
             }
 
-        }while();
-        
-        public void Promedio(){
+            System.out.println("Si deseas repetir el menú, oprime R");
+            exit = entrada.next().charAt(0);
 
-            int promedio [] = new int [3];
-            int num;
-            float promediop, promedion;
-            
-            System.out.println("En este programa lo que puedes hacer es insertar 10 numeros, ya sean positivos o negativos");
-            System.out.println("y se te devolvera el promedio de los números positivos y el promedio de los valores negativos.");
-
-            for (int i; i<promedio.length; i++){
-
-                System.out.println("Introduce el número");
-                promedio [i] = entrada.nextInt();
-            }
-
-            
-        }           
+        }while();       
 
     }
 

@@ -11,50 +11,53 @@ public class Llamada{
     
     public void menullama(){
 
-        System.out.println("Bienvenido, como eres un nuevo usuario te regalamos $80 de credito");
+        do{
+            System.out.println("Bienvenido, como eres un nuevo usuario te regalamos $80 de credito");
         
-        System.out.println("Elige la accion a realizar");
-        System.out.println();
-        System.out.println("1. Realizar una llamada local.");
-        System.out.println("2. Realizar una llamada internacional.");
-        System.out.println("3. Realizar una llamada a un numero celular.");
-        System.out.println("4. Consultar tu saldo.");
+            System.out.println("Elige la accion a realizar");
+            System.out.println();
+            System.out.println("1. Realizar una llamada local.");
+            System.out.println("2. Realizar una llamada internacional.");
+            System.out.println("3. Realizar una llamada a un numero celular.");
+            System.out.println("4. Consultar tu saldo.");
+            
+            opc = entrada.nextInt();
+
+            Llamada obj = new Llamada();
+            
+            switch (opc) {
+                case 1:
+
+                    System.out.println("Cada llamada local tiene un precio de $0.5");
+                    obj.llamalocal();
+
+                    break;
+                case 2:
+
+                    System.out.println("Cada llamada internacional tiene un precio de $0.6");
+                    obj.llamainter();
+
+                    break;
+                case 3:
+
+                    System.out.println("Cada llamada a un numero celular tiene un precio de $0.2");
+                    obj.llamacelular();
+
+                    break;
+                case 4:
+
+                    System.out.println("Con esto puedes consultar tu credito");
+                    obj.consultar();
+
+                    break;
+                default:
+
+                    System.out.println("Lo sentimos, no existe esa opcion. unu");
+
+                    break;
+            }
+        }while(exit == 'r' || exit == 'R');
         
-        opc = entrada.nextInt();
-
-        Llamada obj = new Llamada();
-        
-        switch (opc) {
-            case 1:
-
-                System.out.println("Cada llamada local tiene un precio de $0.5");
-                obj.llamalocal();
-
-                break;
-            case 2:
-
-                System.out.println("Cada llamada internacional tiene un precio de $0.6");
-                obj.llamainter();
-
-                break;
-            case 3:
-
-                System.out.println("Cada llamada a un numero celular tiene un precio de $0.2");
-                obj.llamacelular();
-
-                break;
-            case 4:
-
-                System.out.println("Con esto puedes consultar tu credito");
-                obj.consultar();
-
-                break;
-            default:
-
-                System.out.println("Lo sentimos, no existe esa opcion. unu");
-
-                break;
-        }
     }
 
     public void llamalocal(){

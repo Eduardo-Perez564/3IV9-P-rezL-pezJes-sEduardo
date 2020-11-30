@@ -1,12 +1,14 @@
-import java.util.scanner;
+import java.util.Scanner;
 
-public class Programas{
+public class Principal{
 
     public static void main(String[] args){
 
         Scanner entrada = new Scanner(System.in);
 
         char opc, exit;
+
+        Arreglitos inv = new Arreglitos();
         
         do{
             System.out.println("Bienvenido");
@@ -23,20 +25,20 @@ public class Programas{
             switch(opc){
                 case 'A':
                 case 'a':
-
+                    inv.Promedio10num();
                     break;
-                /*case 'B':
+                case 'B':
                 case 'b':
-                
+                    inv.Promediopar();
                     break;
                 case 'C':
                 case 'c':
-                
+                    inv.Calificaciones();
                     break;
                 case 'D':
                 case 'd':
-                
-                    break; */
+                    inv.SumadeMatrices();
+                    break;
                 default:
                     break;
 
@@ -45,7 +47,7 @@ public class Programas{
             System.out.println("Si deseas repetir el menú, oprime R");
             exit = entrada.next().charAt(0);
 
-        }while();       
+        }while(exit == 'r' || exit == 'R');       
 
     }
 

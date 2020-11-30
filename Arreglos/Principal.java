@@ -44,7 +44,7 @@ public class Principal{
 
             }
 
-            System.out.println("Si deseas repetir el men, oprime R");
+            System.out.println("Si deseas repetir el menu, oprime R");
             exit = entrada.next().charAt(0);
 
         }while(exit == 'r' || exit == 'R');

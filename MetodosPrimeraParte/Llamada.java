@@ -7,7 +7,8 @@ public class Llamada{
     String numero_celular;
     int opc;
     int credito = 80;
-    char repetir;
+    char repetir, exit;
+
     
     public void menullama(){
 
@@ -56,6 +57,10 @@ public class Llamada{
 
                     break;
             }
+
+            System.out.println("Si desea repetir el programa, oprima 'R");
+            exit = entrada.next().charAt(0);
+
         }while(exit == 'r' || exit == 'R');
         
     }

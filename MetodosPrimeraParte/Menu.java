@@ -54,8 +54,5 @@ public class Menu{
             exit = entrada.next().charAt(0);
 
         }while(exit == 'r' || exit == 'R');
-        
-        
     }
-
 }

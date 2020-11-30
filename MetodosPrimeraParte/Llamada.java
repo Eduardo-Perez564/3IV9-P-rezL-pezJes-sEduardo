@@ -6,7 +6,7 @@ public class Llamada{
 
     String numero_celular;
     int opc;
-    int credito = 80;
+    float credito = 80;
     char repetir, exit;
 
     

@@ -50,7 +50,7 @@ public class Menu{
     
             }
             
-            System.out.println("Si deseas repetir el programa, oprime r");
+            System.out.println("Si deseas repetir el menu, oprime r");
             exit = entrada.next().charAt(0);
 
         }while(exit == 'r' || exit == 'R');

@@ -130,7 +130,7 @@ public class Arreglitos{
             
             resultado = resultado/prome.length;
 
-            System.out.println("El proemdio de las calificaciones es: "+resultado);
+            System.out.println("El proemedio de las calificaciones es: "+resultado);
 
             for(int i=0;i<prome.length;i++){
                 
@@ -160,6 +160,8 @@ public class Arreglitos{
 
         int matriz_s [][]=new int[3][3];
 
+        System.out.println("Aqui se generan numeros aleatrorios para la primera y segunda matriz, posteriormente se suman en una tercera matriz");
+        
         //Llenado de matriz
         
         do{

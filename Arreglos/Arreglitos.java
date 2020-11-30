@@ -85,7 +85,7 @@ public class Arreglitos{
         float[] resultados=new float[10];
 
         System.out.println("Aqui podras: Imprimir todas las calificaciones. Promedio de las calificaciones. ");
-        System.out.println("La calificación más alta y la más baja. El número de calificaciones superiores al promedio. ");
+        System.out.println("La calificacion mas alta y la mas baja. El numero de calificaciones superiores al promedio. ");
         System.out.println("La cantidad de alumnos aprobados y reprobados.");
 
         do{
@@ -93,7 +93,7 @@ public class Arreglitos{
             for(int i=0;i<prome.length;i++){
 
                 System.out.println("Inserte la calificacion.");
-                prome[i] = entrada.nextInt();
+                prome[i] = entrada.nextFloat();
 
             }
 

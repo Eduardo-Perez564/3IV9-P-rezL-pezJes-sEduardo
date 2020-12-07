@@ -1,15 +1,15 @@
-
 package TiposyPreparacion;
-
 /**
  *
  * @author jp999
  */
+
 public class ElaboracionPizza {
     
     private String masa;
     private String[] Salsa;
     protected String[] ingredientes;
+    private String[] tamanio;
     
     public ElaboracionPizza(){
         
@@ -19,10 +19,8 @@ public class ElaboracionPizza {
         this.masa = masa;
         this.Salsa = Salsa;
         this.ingredientes = ingredientes;
-        
-        
     }
-
+    
     public String[] getIngredientes() {
         return ingredientes;
     }
@@ -49,10 +47,6 @@ public class ElaboracionPizza {
     
     public void Hornear(){
         System.out.println("La pizza se tarda 15 minutos en hornear");
-    }
-    
-    public void corte(){
-        System.out.println("La pizza se corta en 12 porciones");
     }
     
     public void empacar(){

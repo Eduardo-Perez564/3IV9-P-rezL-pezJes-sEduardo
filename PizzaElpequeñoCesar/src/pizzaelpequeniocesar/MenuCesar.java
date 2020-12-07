@@ -24,6 +24,7 @@ public class MenuCesar {
             System.out.println("1. Pizza de Queso");
             System.out.println("2. Pizza de Pepperoni");
             System.out.println("3. Pizza Vegetariana");
+            System.out.println("4. Dejar de pedir");
 
             opc = pedido.nextInt();
 
@@ -37,7 +38,6 @@ public class MenuCesar {
                     quesito.ElegirQueso();
                     //llamamos a los métodos para su preparación
                     piza.Hornear();
-                    piza.corte();
                     piza.empacar();
                     
                     break;
@@ -47,9 +47,9 @@ public class MenuCesar {
                     PizzaPepperoni pepe = new PizzaPepperoni();
                     //preguntamos como quiere el pepperoni
                     pepe.SeleccionarPeppe();
+                    pepe.rebanadaPago();
                     //llamamos a los métodos para su preparación
                     piza.Hornear();
-                    piza.corte();
                     piza.empacar();
                     
                     break;
@@ -59,13 +59,11 @@ public class MenuCesar {
                     PizzaVegetariana vege = new PizzaVegetariana();
                     //Preguntamos el vegetal para su pizza
                     vege.TipoVege();
+                    vege.rebanadaPago3();
                     //llamamos a los métodos para su elaboración
                     piza.Hornear();
-                    piza.corte();
                     piza.empacar();
                     break;
-
-
             }
         }while(opc != 4);
         
